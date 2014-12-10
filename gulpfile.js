@@ -1,22 +1,22 @@
-var gulp = require('gulp');
-var source = require('vinyl-source-stream');
-var buffer = require('vinyl-buffer');
+var gulp       = require('gulp');
+var source     = require('vinyl-source-stream');
+var buffer     = require('vinyl-buffer');
 var browserify = require('browserify');
 var ngAnnotate = require('gulp-ng-annotate');
 var sourcemaps = require('gulp-sourcemaps');
-var uglify = require('gulp-uglify');
-var concat = require('gulp-concat');
-var ngHtml2Js = require("gulp-ng-html2js");
+var uglify     = require('gulp-uglify');
+var concat     = require('gulp-concat');
+var ngHtml2Js  = require("gulp-ng-html2js");
 var minifyHtml = require("gulp-minify-html");
-var clean = require('gulp-clean');
-var inject = require("gulp-inject");
-var sass = require('gulp-ruby-sass');
-var rename = require('gulp-rename');
-var template = require('gulp-template');
-var karma = require('gulp-karma');
+var clean      = require('gulp-clean');
+var inject     = require("gulp-inject");
+var sass       = require('gulp-ruby-sass');
+var rename     = require('gulp-rename');
+var template   = require('gulp-template');
+var karma      = require('gulp-karma');
 var livereload = require('gulp-livereload');
-var glob = require("glob")
-var pkg = require('./package.json');
+var glob       = require('glob');
+var pkg        = require('./package.json');
 
 
 /**
@@ -101,7 +101,7 @@ gulp.task('css', function() {
             read: false
         }), {
             transform: function(filepath) {
-                return "@import '../.." + filepath + "'; /* " + filepath + " */"
+                return "@import '../.." + filepath + "'; /* " + filepath + " */";
             },
             starttag: "/* inject:scss */",
             endtag: "/* endinject */"
@@ -149,7 +149,7 @@ gulp.task('create-tests',["templates"], function() {
             read: false
         }), {
             transform: function(filepath) {
-                return "require('.." + filepath + "');"
+                return "require('.." + filepath + "');";
             },
             starttag: "/* inject:js */",
             endtag: "/* endinject */"
