@@ -29,5 +29,7 @@ module.exports = angular.module('app', [
     $rootScope.$state = $state;
     $rootScope.$stateParams = $stateParams;
 }])
-.controller('AppCtrl',['$scope', '$http',AppCtrl])
+
+.controller('AppCtrl',['$scope', '$http', AppCtrl])
+
 .factory('listingsService',[listingsService]);

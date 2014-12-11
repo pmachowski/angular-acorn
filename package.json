@@ -1,9 +1,12 @@
 {
   "name": "angular-acorn",
   "version": "2.0.0",
+  "dependencies": {
+    "express": "~4.4.3"
+  },
   "devDependencies": {
     "browserify": "6.1.0",
-    "gulp": "3.8.9",
+    "gulp": "3.8.10",
     "bower": "1.3.12",
     "vinyl-source-stream": "1.0.0",
     "gulp-util": "3.0.1",
@@ -14,7 +17,7 @@
     "gulp-clean": "0.3.1",
     "gulp-ng-html2js": "0.1.8",
     "gulp-inject": "1.0.2",
-    "gulp-sass": "1.2.4",
+    "gulp-ruby-sass": "0.7.1",
     "gulp-rename": "~1.2.0",
     "gulp-template": "1.1.1",
     "karma": "~0.12.1",
